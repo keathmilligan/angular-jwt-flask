@@ -1,0 +1,22 @@
+<h1>Login:</h1>
+
+<p style="color:red">{{ message }}</p>
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+  <div>
+    <label>
+      Username:
+      <input type="text" formControlName="username">
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Password:
+      <input type="password" formControlName="password">
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>

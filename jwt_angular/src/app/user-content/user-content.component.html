@@ -1,0 +1,12 @@
+<h1>User Content</h1>
+
+<p style="color:red">{{ message }}</p>
+
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>
+    Example Value:
+    <input type="number" formControlName="example">
+  </label>
+
+  <button type="submit" [disabled]="!userForm.valid">Submit</button>
+</form>

@@ -1,0 +1,4 @@
+.flake8
+.virtualenv
+__pycache__
+*.egg-info

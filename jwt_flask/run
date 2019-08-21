@@ -1,0 +1,3 @@
+export FLASK_APP=jwtapp
+export FLASK_DEBUG=1
+python -m flask run --reload --debugger --with-threads

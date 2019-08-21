@@ -1,0 +1,12 @@
+<h1>Admin Content</h1>
+
+<p style="color:red">{{ message }}</p>
+
+<form [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+  <label>
+    Example Value:
+    <input type="number" formControlName="example">
+  </label>
+
+  <button type="submit" [disabled]="!adminForm.valid">Submit</button>
+</form>

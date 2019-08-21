@@ -1,0 +1,15 @@
+<div *ngIf="authenticated">
+  <p style="color: blue">
+    Logged in as <strong>{{ username }}</strong>
+    <span *ngIf="isAdmin"><strong>[administrator]</strong></span>
+  </p>
+</div>
+
+<ul>
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/user-content">User Content</a></li>
+  <li *ngIf="isAdmin"><a routerLink="/admin-content">Admin Content</a></li>
+  <li><a routerLink="/logout">Log out</a></li>
+</ul>
+
+<router-outlet></router-outlet>
